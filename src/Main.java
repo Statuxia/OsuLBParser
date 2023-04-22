@@ -10,8 +10,9 @@ public class Main {
     );
     public static void main(String[] args) throws IOException {
         for (String mode : urls.keySet()) {
+            System.out.println("Getting " + mode + " leaderboard from " + urls.get(mode));
             String data = DataParser.getByClass(urls.get(mode), "tbody");
-            DataSaver.of(mode, data);
+            new DataSaver(mode, data);
         }
     }
 }

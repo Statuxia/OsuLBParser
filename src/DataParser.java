@@ -36,7 +36,6 @@ public class DataParser {
                     }
                 }
             }
-            System.out.println(builder);
         }
         return builder.toString();
     }

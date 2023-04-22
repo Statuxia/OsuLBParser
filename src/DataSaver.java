@@ -8,7 +8,7 @@ public class DataSaver {
     private Path currentPath;
     private String data;
 
-    private DataSaver(String mode, String data) throws IOException {
+    public DataSaver(String mode, String data) throws IOException {
         if (mode == null || mode.isEmpty() || data == null) {
             return;
         }
@@ -30,9 +30,5 @@ public class DataSaver {
 
     private void upload() throws IOException {
         Files.writeString(currentPath, data, StandardCharsets.UTF_8);
-    }
-
-    public static DataSaver of(String mode, String data) throws IOException {
-        return new DataSaver(mode, data);
     }
 }
