@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OsuLBParser:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OsuLBParser_jar</output-path>
+    <root id="archive" name="OsuLBParser.jar">
+      <element id="module-output" name="OsuLBParser" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dependencies/jsoup-1.15.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
