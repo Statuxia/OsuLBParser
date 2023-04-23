@@ -23,7 +23,11 @@ public class DataParser {
                 Element column = columns.get(i2);
                 switch (i2) {
                     case 2 -> {
-                        builder.append(column.select("a").get(0).firstChild());
+                        if (column.select("a").get(0).firstChild() == null) {
+                            builder.append("-");
+                        } else {
+                            builder.append(column.select("a").get(0).firstChild());
+                        }
                         builder.append(" || ");
                     }
                     case 4 -> {
